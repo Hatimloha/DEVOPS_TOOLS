@@ -10,7 +10,9 @@
 
 ```python
 curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube_latest_amd64.deb
+
 sudo dpkg -i minikube_latest_amd64.deb
+
 apt-get install docker.io
 minikube start --driver=docker --force
 echo "$(cat kubectl.sha256)  kubectl" | sha256sum --check
