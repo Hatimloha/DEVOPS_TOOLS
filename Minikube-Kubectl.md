@@ -12,11 +12,17 @@
 curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube_latest_amd64.deb
 
 sudo dpkg -i minikube_latest_amd64.deb
+```
 
+```python
 apt-get install docker.io
+```
 
+```python
 minikube start --driver=docker --force
+```
 
+```python
 echo "$(cat kubectl.sha256)  kubectl" | sha256sum --check
 
 sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
@@ -30,7 +36,8 @@ mv ./kubectl ~/.local/bin/kubectl
 kubectl version --client
 
 kubectl version --client --output=yaml
-
+```
+```python
 sudo apt-get update
 
 sudo apt-get install -y apt-transport-https ca-certificates curl gnupg
@@ -42,7 +49,8 @@ sudo chmod 644 /etc/apt/keyrings/kubernetes-apt-keyring.gpg # allow unprivileged
 echo 'deb [signed-by=/etc/apt/keyrings/kubernetes-apt-keyring.gpg] https://pkgs.k8s.io/core:/stable:/v1.31/deb/ /' | sudo tee /etc/apt/sources.list.d/kubernetes.list
 
 sudo chmod 644 /etc/apt/sources.list.d/kubernetes.list
-
+```
+```python
 sudo apt-get update
 
 sudo apt-get install -y kubectl
